@@ -1,0 +1,255 @@
+{
+          "minerPayouts": [
+                    {
+                              "start": 5028822,
+                              "end": 5070514,
+                              "amount": 391973874622018400,
+                              "txHash": "0x9f01c81716921dd0450859199eb906efcc88a11960d9bb893d61a4e984d519cc",
+                              "paidOn": 1518346852
+                    },
+                    {
+                              "start": 4987466,
+                              "end": 5028799,
+                              "amount": 437916616065150300,
+                              "txHash": "0xd0a4d976c0cf2e0fa578f69702e141d547363054c6ffba72217cff5ddade7f2d",
+                              "paidOn": 1517741934
+                    },
+                    {
+                              "start": 4945870,
+                              "end": 4987433,
+                              "amount": 366065859862917570,
+                              "txHash": "0x2b3f54c2fcd64f3969af50b22ce393fd320b3a5e6ad767be9f5542f1776e6aee",
+                              "paidOn": 1517136805
+                    },
+                    {
+                              "start": 4906557,
+                              "end": 4945173,
+                              "amount": 391240763675701100,
+                              "txHash": "0x9c2c6796f3efe3c6c84d38dc99047e8c09ff6529f016767f2c4b16dccd25c105",
+                              "paidOn": 1516531803
+                    },
+                    {
+                              "start": 4868495,
+                              "end": 4906528,
+                              "amount": 370373998184011970,
+                              "txHash": "0x68c18df06382462fc964e8f0c9ff70261e3bb13723f8b473129df6d5eb8bc701",
+                              "paidOn": 1515926864
+                    },
+                    {
+                              "start": 4829359,
+                              "end": 4868469,
+                              "amount": 601733575918531500,
+                              "txHash": "0x162e4fe13f1e1a7d9beb098ac8e77aa59dabbffdc73ada58ccb740eab0742af4",
+                              "paidOn": 1515322049
+                    },
+                    {
+                              "start": 4787882,
+                              "end": 4829335,
+                              "amount": 641311181749988700,
+                              "txHash": "0xa7e974121105642d73b6dd0a06e72c7513341a967d22ca9f4840d64607feee74",
+                              "paidOn": 1514716799
+                    },
+                    {
+                              "start": 4747910,
+                              "end": 4787850,
+                              "amount": 698909636727119200,
+                              "txHash": "0x2320379fd8df3531252ac0dd503b3956c2bf20a068bde0be5f9e849881658cb5",
+                              "paidOn": 1514111715
+                    },
+                    {
+                              "start": 4707662,
+                              "end": 4747890,
+                              "amount": 748228678179972100,
+                              "txHash": "0x74c02635e451cec1653bd5c4e60f9883711f58047efc09b4b038a98a2672ab42",
+                              "paidOn": 1513506610
+                    },
+                    {
+                              "start": 4654296,
+                              "end": 4707634,
+                              "amount": 1000541795315379100,
+                              "txHash": "0x4e720b78fe97b065c3d44c4e7b91fd1dd6f5df58edfaf0523ba639c6e407a341",
+                              "paidOn": 1512901468
+                    },
+                    {
+                              "start": 4586494,
+                              "end": 4654280,
+                              "amount": 1000324990437046500,
+                              "txHash": "0x79f4c0150a49a72477937717d6feb393081f3658d5d771265c8bf2c7fa85c1b1",
+                              "paidOn": 1512106723
+                    },
+                    {
+                              "start": 4512922,
+                              "end": 4586466,
+                              "amount": 1000264977853414400,
+                              "txHash": "0xbf88601b871cd92c380e674cafd95ea0705eb46c04d975f02708f84878a4e7db",
+                              "paidOn": 1511156202
+                    },
+                    {
+                              "start": 4449686,
+                              "end": 4512883,
+                              "amount": 1000775224682437500,
+                              "txHash": "0xac93ffdf472a3abf437b8dcc22a1a67650753edc795fd648a2fedc9b8b9f2252",
+                              "paidOn": 1510135086
+                    },
+                    {
+                              "start": 4381740,
+                              "end": 4449628,
+                              "amount": 1001193728692134800,
+                              "txHash": "0x082a01b216e2deaa14197d4863f7c2cbaf41e77d57cb162deeb6e62a88d8b363",
+                              "paidOn": 1509253005
+                    },
+                    {
+                              "start": 4334967,
+                              "end": 4381700,
+                              "amount": 1000375849369742800,
+                              "txHash": "0xb83303fdf81b32a5933d323ab2287a351beda17c92ebf1c507dfbc56c51a1b10",
+                              "paidOn": 1508310840
+                    },
+                    {
+                              "start": 4294099,
+                              "end": 4334961,
+                              "amount": 1000053944910659200,
+                              "txHash": "0xa3770a819e453f7f8a87bba7ce5ec31f691c148ddd24ef8fb80c3b25a9b51b28",
+                              "paidOn": 1507088097
+                    },
+                    {
+                              "start": 4255407,
+                              "end": 4294065,
+                              "amount": 1000222604297917200,
+                              "txHash": "0xb2b16c335ec18e1011bead2de562ab16d9269f51b9f55ee42d6c505968f5291d",
+                              "paidOn": 1505897364
+                    },
+                    {
+                              "start": 4215527,
+                              "end": 4255395,
+                              "amount": 1000042928715810600,
+                              "txHash": "0x1214dc02d6fe5bc4439aaa15f487f5f2b82991eb37c43ad4266b7721243b7966",
+                              "paidOn": 1504967187
+                    },
+                    {
+                              "start": 4178450,
+                              "end": 4215500,
+                              "amount": 1000562710503931500,
+                              "txHash": "0x5aaa94d524863d0dfb526196cf38bc9b85bc755e84b3b86f9b2d96cdb256bdb4",
+                              "paidOn": 1503992717
+                    },
+                    {
+                              "start": 4135247,
+                              "end": 4178426,
+                              "amount": 1000394608925905700,
+                              "txHash": "0x1dcdd65029a5bc5a7f91f98150379339a30531d5f651df9cdd67b3080256f59d",
+                              "paidOn": 1503167200
+                    },
+                    {
+                              "start": 4093163,
+                              "end": 4135227,
+                              "amount": 1000063427838690400,
+                              "txHash": "0x548d47098caf199714f48ca60c96ddb376cd1ff1ad2f0fb8541976b7115bae1a",
+                              "paidOn": 1502263160
+                    },
+                    {
+                              "start": 4039981,
+                              "end": 4093136,
+                              "amount": 1000234019560328400,
+                              "txHash": "0xb9eb623b866ba67c21c49bb85cee6840ef50f7b794d135f9a8bc794d6d3a97d0",
+                              "paidOn": 1501386915
+                    }
+          ],
+          "minerEarn": {
+                    "perMinute": 0.000036909329350917485,
+                    "perHour": 0.002214559761055049,
+                    "perDay": 0.05314943426532118
+          },
+          "workersEarns": [
+                    {
+                              "averageEarn": {
+                                        "perMinute": 0.000006874950675843544,
+                                        "perHour": 0.0004124970405506126,
+                                        "perDay": 0.009899928973214702
+                              },
+                              "worker": {
+                                        "worker": "rig1",
+                                        "time": 1518714000,
+                                        "lastSeen": 1518713998,
+                                        "reportedHashrate": 125292388,
+                                        "currentHashrate": 126944444.44444445,
+                                        "validShares": 111,
+                                        "invalidShares": 0,
+                                        "staleShares": 5,
+                                        "averageHashrate": 118618055.55555554
+                              }
+                    },
+                    {
+                              "averageEarn": {
+                                        "perMinute": 0.000006693024693437287,
+                                        "perHour": 0.00040158148160623723,
+                                        "perDay": 0.009637955558549693
+                              },
+                              "worker": {
+                                        "worker": "rig2",
+                                        "time": 1518714000,
+                                        "lastSeen": 1518713991,
+                                        "reportedHashrate": 122341151,
+                                        "currentHashrate": 126277777.77777778,
+                                        "validShares": 113,
+                                        "invalidShares": 0,
+                                        "staleShares": 1,
+                                        "averageHashrate": 115479166.66666669
+                              }
+                    },
+                    {
+                              "averageEarn": {
+                                        "perMinute": 0.000006575005355293208,
+                                        "perHour": 0.0003945003213175925,
+                                        "perDay": 0.00946800771162222
+                              },
+                              "worker": {
+                                        "worker": "rig3",
+                                        "time": 1518714000,
+                                        "lastSeen": 1518713986,
+                                        "reportedHashrate": 118834797,
+                                        "currentHashrate": 105500000,
+                                        "validShares": 93,
+                                        "invalidShares": 0,
+                                        "staleShares": 3,
+                                        "averageHashrate": 113442901.23456793
+                              }
+                    },
+                    {
+                              "averageEarn": {
+                                        "perMinute": 0.0000067757589774716,
+                                        "perHour": 0.000406545538648296,
+                                        "perDay": 0.009757092927559104
+                              },
+                              "worker": {
+                                        "worker": "rig4",
+                                        "time": 1518714000,
+                                        "lastSeen": 1518713947,
+                                        "reportedHashrate": 118408135,
+                                        "currentHashrate": 104666666.66666667,
+                                        "validShares": 89,
+                                        "invalidShares": 0,
+                                        "staleShares": 8,
+                                        "averageHashrate": 116906635.8024692
+                              }
+                    },
+                    {
+                              "averageEarn": {
+                                        "perMinute": 0.000009990589648871846,
+                                        "perHour": 0.0005994353789323108,
+                                        "perDay": 0.01438644909437546
+                              },
+                              "worker": {
+                                        "worker": "rig5",
+                                        "time": 1518714000,
+                                        "lastSeen": 1518713950,
+                                        "reportedHashrate": 179806161,
+                                        "currentHashrate": 159888888.8888889,
+                                        "validShares": 140,
+                                        "invalidShares": 0,
+                                        "staleShares": 6,
+                                        "averageHashrate": 172374228.3950617
+                              }
+                    }
+          ]
+}
