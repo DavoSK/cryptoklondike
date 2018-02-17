@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Stuff bitch</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+	
+	
+	<body>
+		<div id="app">
+			<div class="container">
+				
+				<br>
+				
+				<div class="jumbotron">
+					<h1 class="display-4">Crypto klondike</h1>
+					<p class="lead">Ultra brutal analitics tool for your rigs !.</p>
+					<hr class="my-4">
+				</div>
+
+				<div class="alert alert-primary" role="alert">
+				  Your rigs
+				</div>
+				
+				<div class="card" v-for="item in fetchedData.workersEarns" style="margin-bottom: 10px;">
+					<div class="card-header">
+						Earns from: {{item.worker.worker}}
+					</div>
+  
+					<div class="card-body">
+						<table class="table">
+						  <thead>
+							<tr>
+							  <th scope="col">#</th>
+							  <th scope="col">ETH</th>
+							  <th scope="col">EUR</th>
+							  <th scope="col">USD</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th scope="row">Minute</th>
+							  <td>{{item.averageEarn.ETH.perMinute}}</td>
+							  <td>{{item.averageEarn.EUR.perMinute}}</td>
+							  <td>{{item.averageEarn.USD.perMinute}}</td>
+							</tr>
+							<tr>
+							  <th scope="row">Hour</th>
+							  <td>{{item.averageEarn.ETH.perHour}}</td>
+							  <td>{{item.averageEarn.EUR.perHour}}</td>
+							  <td>{{item.averageEarn.USD.perHour}}</td>
+							</tr>
+							<tr>
+							  <th scope="row">Day</th>
+							  <td>{{item.averageEarn.ETH.perDay}}</td>
+							  <td>{{item.averageEarn.EUR.perDay}}</td>
+							  <td>{{item.averageEarn.USD.perDay}}</td>
+							</tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+				
+				<div class="alert alert-danger" role="alert">
+					Your earns together
+				</div>
+				
+				<br>
+				
+				<div class="card" style="margin-bottom: 10px;">
+					<div class="card-header">
+						Total earns from miner
+					</div>
+					
+					<div class="card-body">
+						<table class="table">
+						  <thead>
+							<tr>
+							  <th scope="col">#</th>
+							  <th scope="col">ETH</th>
+							  <th scope="col">EUR</th>
+							  <th scope="col">USD</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th scope="row">Minute</th>
+							  <td>{{fetchedData.minerEarn.ETH.perMinute}}</td>
+							  <td>{{fetchedData.minerEarn.EUR.perMinute}}</td>
+							  <td>{{fetchedData.minerEarn.USD.perMinute}}</td>
+							</tr>
+							<tr>
+							  <th scope="row">Hour</th>
+							  <td>{{fetchedData.minerEarn.ETH.perHour}}</td>
+							  <td>{{fetchedData.minerEarn.EUR.perHour}}</td>
+							  <td>{{fetchedData.minerEarn.USD.perHour}}</td>
+							</tr>
+							<tr>
+							  <th scope="row">Day</th>
+							  <td>{{fetchedData.minerEarn.ETH.perDay}}</td>
+							  <td>{{fetchedData.minerEarn.EUR.perDay}}</td>
+							  <td>{{fetchedData.minerEarn.USD.perDay}}</td>
+							</tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					fetchedData: {}
+				},
+				created: function() {
+					const _this = this;
+					$.get('/api', function(data) {
+						_this.fetchedData = data;
+					});
+				}
+			});
+		</script>
+	</body>
+	
+</html>

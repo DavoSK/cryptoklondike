@@ -11,6 +11,7 @@ const COIN_MARKET_API_URL 	= 'https://api.coinmarketcap.com/v1/ticker/ethereum/?
 */
 function fetchAsnych(url, callback) {
 	request.get(url, (err, request, body)=> {
+		if(err != null) return console.log('[*] request failed: ' + err);
 		callback(body);
 	});
 }
@@ -99,11 +100,22 @@ module.exports = class EtherMine {
 	* Return object with precalculated earn per minute, hour, day
 	*/
 	getAverageEarnsFromCoinsPerMin(coins) {
-		
 		return {
-			perMinute: 	coins,
-			perHour: 	coins * 60,
-			perDay: 	coins * 60 * 24
+			ETH: {
+				perMinute: 	coins,
+				perHour: 	coins * 60,
+				perDay: 	coins * 60 * 24
+			}, 
+			EUR: {
+				perMinute: this.toEUR(coins),
+				perHour:   this.toEUR(coins * 60),
+				perDay:    this.toEUR(coins * 60 * 24)
+			}, 
+			USD: {
+				perMinute: this.toUSD(coins),
+				perHour:   this.toUSD(coins * 60),
+				perDay:    this.toUSD(coins * 60 * 24)
+			}
 		}
 	}
 	
@@ -130,7 +142,7 @@ module.exports = class EtherMine {
 						notFixed.push(workerEarn);						
 					});
 						
-					const error 			=  earn.perMinute / coinsTogether;
+					const error 			=  earn.ETH.perMinute / coinsTogether;
 					var finalReturnObject 	= [];
 					
 					for(var i in workers) {

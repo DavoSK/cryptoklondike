@@ -21,8 +21,9 @@ pool.getAverageEarnPerWorker((earns)=> {
 	dataToSend.workersEarns = earns;
 });
 
+app.use(express.static('public'));
 app.set('json spaces', 30);
-app.get('/', (req, res)=> {
+app.get('/api', (req, res)=> {
 	res.setHeader('Content-Type', 'application/json');
 	res.json(dataToSend);
 })
