@@ -19,23 +19,22 @@ module.exports = class EtherMine {
 	
 	constructor(minerKey) {
 		
-		var _this 			= this;
+		const _this 		= this;
 		this.minerKey 		= minerKey;
 		this.urlParseList 	= [
 			{':miner': this.minerKey},
 		];
 		
 		fetchAsnych(COIN_MARKET_API_URL, (data)=> {
-			_this.coinMarketCap = JSON.parse(data);
+			_this.coinMarketCap = JSON.parse(data)[0];
 		});
 	}
 	
 	parseUrl(toParse) {
 		
-		/*NODE(DavoSK): Meybe regex later*/
 		for(var i in this.urlParseList) {
 			var object 	= this.urlParseList[i];
-			var key 	= Object.keys(object)[0];	
+			const key 	= Object.keys(object)[0];	
 			
 			if(toParse.indexOf(key) > -1) {
 				return ETHER_MINE_API_URL + toParse.replace(key, object[key]);
@@ -93,8 +92,19 @@ module.exports = class EtherMine {
 	
 		const blockReward 		= 3;
 		const diffTH 			= stats.difficulty / 1e12;
-		
 		return (worker.averageHashrate / ((diffTH / stats.blockTime) * 1000 * 1e9)) * ((60 / stats.blockTime ) * blockReward);
+	}
+	
+	/* 
+	* Return object with precalculated earn per minute, hour, day
+	*/
+	getAverageEarnsFromCoinsPerMin(coins) {
+		
+		return {
+			perMinute: 	coins,
+			perHour: 	coins * 60,
+			perDay: 	coins * 60 * 24
+		}
 	}
 	
 	/* 
@@ -102,7 +112,7 @@ module.exports = class EtherMine {
 	*/
 	getAverageEarnPerWorker(callback) {
 		
-		var _this = this;
+		const _this = this;
 		_this.getNetworkStats((stats) => {
 			
 			_this.getAverageEarn((earn)=> {
@@ -113,27 +123,22 @@ module.exports = class EtherMine {
 					var notFixed 		= [];
 					var coinsTogether 	= 0;
 					
-					//Gets earn for each worker
 					workers.forEach((worker)=> {
 							
-						var workerEarn = _this.getWorkerEarn(worker, stats);
+						const workerEarn = _this.getWorkerEarn(worker, stats);
 						coinsTogether += workerEarn;
 						notFixed.push(workerEarn);						
 					});
 						
-					var error 				=  earn.perMinute / coinsTogether;
+					const error 			=  earn.perMinute / coinsTogether;
 					var finalReturnObject 	= [];
 					
 					for(var i in workers) {
-						var fixedCoinsEarnPerMin = notFixed[i] * error;
-						var currentWorker 		 = workers[i];
+						const fixedCoinsEarnPerMin = notFixed[i] * error;
+						const currentWorker 		 = workers[i];
 
 						finalReturnObject.push({
-							averageEarn: {
-								perMinute: 	fixedCoinsEarnPerMin,
-								perHour: 	fixedCoinsEarnPerMin * 60,
-								perDay: 	fixedCoinsEarnPerMin * 60 * 24
-							},
+							averageEarn: _this.getAverageEarnsFromCoinsPerMin(fixedCoinsEarnPerMin),
 							worker: currentWorker
 						});
 					}
@@ -150,16 +155,11 @@ module.exports = class EtherMine {
 	*/
 	getAverageEarn(callback) {
 	
-		this.getCurrentStats((stats)=> {
-			
-			var data = {
-				perMinute: 	stats.coinsPerMin,
-				perHour: 	stats.coinsPerMin * 60,
-				perDay: 	stats.coinsPerMin * 60 * 24
-			};
+		const _this = this;
+		_this.getCurrentStats((stats)=> {
 			
 			if(callback)
-				callback(data);
+				callback(_this.getAverageEarnsFromCoinsPerMin(stats.coinsPerMin));
 		});
 	}
 	
@@ -167,10 +167,10 @@ module.exports = class EtherMine {
 	* Functions for converting currencies
 	*/
 	toUSD(toConvert) {
-		return this.coinMarketCap[0].price_usd * toConvert;
+		return this.coinMarketCap.price_usd * toConvert;
 	}
 	
 	toEUR(toConvert) {
-		return this.coinMarketCap[0].price_eur * toConvert;
+		return this.coinMarketCap.price_eur * toConvert;
 	}
 };

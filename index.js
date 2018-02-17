@@ -18,7 +18,6 @@ pool.getAverageEarn((earn)=> {
 
 //Get average earns from every worker
 pool.getAverageEarnPerWorker((earns)=> {
-	
 	dataToSend.workersEarns = earns;
 });
 
